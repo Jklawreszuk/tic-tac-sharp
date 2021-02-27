@@ -1,0 +1,38 @@
+body,div.grid-item p{
+    margin:0;
+}
+div.grid-item p{
+    font-size: 2em;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    text-align: center;
+    height: 50vmin;
+    width: 50vmin;
+    align-self: center;
+}
+div.grid-item{
+    border:rgb(4, 4, 29) 2px solid;
+    color: rgb(4, 4, 29);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.grid-item:hover{
+    background-color:rgb(218, 218, 218);
+    
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: normal;   
+}

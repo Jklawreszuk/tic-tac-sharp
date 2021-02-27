@@ -1,0 +1,24 @@
+
+      @if(winner!=FieldState.None)
+      {
+        <h1>Zwycięzcą jest 
+          @winner.Humanize()
+        </h1>
+      }
+      else if(winner!=FieldState.None && Array.TrueForAll(matrix,m=>m!=FieldState.None)){
+        <h1>Remis</h1>
+      }
+      else
+      {
+        <h1>Teraz @(isFirst? "Kółko" : "Krzyżyk") </h1>
+      }
+    
+  <div class="grid">
+
+    @for(int i=0;i<size;i++)
+    {
+        <Field IsFirst=@isFirst Pos=i State=@matrix[i] OnStateChanged=@ChangeState />
+    }
+  
+  </div>
+
